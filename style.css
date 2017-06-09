@@ -1,0 +1,89 @@
+/* general
+-----------------------*/
+html {
+  overflow-y: scroll;
+}
+
+body {
+	font: 18px "Courier New", "Courier Prime", Courier, monospace;
+	line-height: 24px;
+	font-weight: 300;
+	color: #000;
+	background-color: #fff;
+}
+
+.grid-container {
+  padding-bottom: 0px;
+}
+
+a {
+  color: #1a1a1a;
+	text-decoration: none;
+	border-bottom: 1px solid #312e2a;
+}
+a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid #312e2a;
+}
+
+/* side nav
+--------------------------------------------------*/
+
+.side-bar {
+	height: 100%;
+	width: 100px;
+	color: #000;
+	background-color: #fff;
+}
+
+.side-bar h1 {
+	font-size: 18px;
+	font-weight: normal;
+	text-align: center;
+	line-height: 20px;
+  padding: 0 200px 0 0;
+}
+
+.side-bar ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 767px) {
+	.side-bar {
+		height: 45px;
+	}
+	.side-bar h1 {
+		top: 13px;
+	}
+}
+
+
+/* home
+--------------------------------------------------*/
+
+.page-home {
+	width: auto;
+  display: flex;
+  height: 100vh;
+	overflow: hidden;
+}
+.page-home .grid-container {
+	width: 230px;
+	min-width: 230px;
+	max-width: 230px;
+}
+.page-home .scroll-container {
+	height: 100%;
+	display: block;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+.page-home .project .text-block p {
+	font-size: 16px;
+	line-height: 22px;
+}
+.page-home .project .text-block p:first-of-type, .page-home .project .text-block h3 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	line-height: 24px;
+}
