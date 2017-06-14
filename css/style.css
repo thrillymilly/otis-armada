@@ -1,0 +1,139 @@
+/* general
+-----------------------*/
+html {
+  overflow-y: scroll;
+}
+
+body {
+	font: 18px "Arial Narrow", Arial;
+	line-height: 24px;
+	font-weight: 300;
+	color: #000;
+	background-color: #d3d3d3;
+  margin: 0;
+}
+
+.grid-container {
+  padding-bottom: 0px;
+}
+
+a {
+  color: #1a1a1a;
+	text-decoration: none;
+	border-bottom: 1px solid #312e2a;
+}
+
+a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid #312e2a;
+}
+
+.page-home {
+	width: 100%;
+  margin: 0;
+}
+
+/* side nav
+--------------------------------------------------*/
+
+.side-bar {
+  float: left;
+	height: 100vh;
+	width: 3%;
+  padding: 0 10px 0 0;
+	color: #000;
+	background-color: #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.side-bar h1 {
+	font-size: 18px;
+	font-weight: normal;
+	text-align: center;
+	line-height: 20px;
+  padding: 0 200px 0 0;
+}
+
+.vertical-text {
+  transform: rotate(-90deg);
+  float: left;
+}
+
+@media screen and (max-width: 767px) {
+	.side-bar {
+		display: none;
+	}
+	.side-bar h1 {
+		top: 13px;
+	}
+}
+
+
+/* home
+--------------------------------------------------*/
+
+.page-content {
+  width: auto;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.total-project {
+  display: flex;
+  width: auto;
+}
+
+.page-content .croc {
+  background: url('../img/01_otis_croc/croc_fig6.jpg');
+  background-size: 100%;
+}
+
+.page-home .grid-container {
+	width: 300px;
+	min-width: 300px;
+	max-width: 300px;
+  background-color: #fff;
+  margin: 0 5px;
+  overflow-y: scroll;
+}
+
+.page-home .project .article {
+  padding: 0 20px;
+}
+
+.page-home .project .article .otis-type {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 10px;
+}
+
+.page-home .project .article .header-block {
+  padding: 20px 0 0px 0;
+}
+
+.page-home .project .article .image-caption {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.page-home .project .text-block p {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+/* images
+--------------------------------------------------*/
+.image-box {
+  text-align: center;
+}
+
+.image-box > .horizontal {
+  width: 100%;
+}
+
+.image-box > .vertical {
+  width: 80%;
+}
