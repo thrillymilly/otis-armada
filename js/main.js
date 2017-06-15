@@ -1,14 +1,14 @@
 $(function ($) {
 
 	function horizontalScroll(direction) {
-		var scrollableWidth = (widthColumn*numColumns)-$(window).width();
-		var alreadyScrolled = scrollableWidth-(widthColumn*(currentColumn-1));
+		var scrollableWidth = (widthColumn * numColumns) - $(window).width();
+		var alreadyScrolled = scrollableWidth - (widthColumn * (currentColumn - 1));
 
-		if (direction=="left" && alreadyScrolled<scrollableWidth) {
+		if (direction == "left" && alreadyScrolled < scrollableWidth) {
 			positionColumns = positionColumns - widthColumn;
 			currentColumn--;
 		}
-		else if (direction=="right" && alreadyScrolled>0) {
+		else if ( direction == "right" && alreadyScrolled > 0) {
 			positionColumns = positionColumns + widthColumn;
 			scrollableWidth - widthColumn;
 			currentColumn++;
@@ -44,7 +44,7 @@ $(function ($) {
 			// handle cursor keys
 			if (event.keyCode === 37) {
 				// go left
-				if ( $( ".page-content" ).length && $(window).width() > 767 ) {
+				if ( $( ".page-content" ).length) {
 					horizontalScroll('left');
 				}
 				else if ($( ".page-project" ).length) {
@@ -54,7 +54,7 @@ $(function ($) {
 
 			else if (event.keyCode === 39) {
 				// go right
-				if ( $( ".page-home" ).length && $(window).width() > 767 ){
+				if ( $( ".page-home" ).length){
           horizontalScroll('right')
         }
 				else if ($( ".page-project" ).length) {
