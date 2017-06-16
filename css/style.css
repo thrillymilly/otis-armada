@@ -65,7 +65,7 @@ a:hover {
 }
 
 @media screen and (max-width: 767px) {
-	.side-bar {
+	.nav {
 		display: none;
 	}
 }
@@ -101,7 +101,7 @@ a:hover {
 	width: 300px;
 	min-width: 300px;
 	max-width: 300px;
-  margin: 0 5px;
+  /*margin: 0 5px;*/
   overflow-y: scroll;
   background-color: #fff;
 }
@@ -146,6 +146,10 @@ img {
 }
 
 .image-box > .horizontal {
+  width: 100%;
+}
+
+.image-box > .logo-image {
   width: 100%;
 }
 

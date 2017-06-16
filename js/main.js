@@ -13,13 +13,13 @@ $(function ($) {
 			scrollableWidth - widthColumn;
 			currentColumn++;
 		}
-		$( ".page-content" ).animate({scrollLeft: positionColumns }, 700);
+		$( ".page-content" ).animate({scrollLeft: positionColumns }, 400);
 	}
 
 	$(document).ready(function($) {
 
 		// home arrow navigation
-		if ( $( ".page-content" ).length && $(window).width() > 767 ) {
+		if ( $(window).width() > 550 ) {
 			// get total number of colums
 			window.numColumns = $(".total-project").length;
 			// get width of single column
@@ -37,8 +37,37 @@ $(function ($) {
 				event.preventDefault();
 				horizontalScroll('right');
 			});
+      $(document).on("swiperight", function(event) {
+				event.preventDefault();
+				horizontalScroll('left');
+			});
+			$(document).on("swipeleft", function(event) {
+				event.preventDefault();
+				horizontalScroll('right');
+			});
+		} else if ($(window).width() < 550) {
+			window.numColumns = $(".project").length;
+			window.widthColumn = $(".project").outerWidth();
+			window.currentColumn = 1;
+			window.positionColumns = 0;
 
-		};
+			$(".arrow-left").click(function(event) {
+				event.preventDefault();
+				horizontalScroll('left');
+			});
+			$(".arrow-right").click(function(event) {
+				event.preventDefault();
+				horizontalScroll('right');
+			});
+      $(document).on("swiperight", function(event) {
+				event.preventDefault();
+				horizontalScroll('left');
+			});
+			$(document).on("swipeleft", function(event) {
+				event.preventDefault();
+				horizontalScroll('right');
+			})
+		}
 		// keyboard navigation
 		$(document.documentElement).keyup(function (event) {
 			// handle cursor keys
@@ -51,7 +80,6 @@ $(function ($) {
 					window.location.href = $( ".arrow-left" )[0].href;
 				}
 			}
-
 			else if (event.keyCode === 39) {
 				// go right
 				if ( $( ".page-home" ).length){
