@@ -1,5 +1,7 @@
 $(function ($) {
 
+	console.log("HELLO WORLD");
+
 	function horizontalScroll(direction) {
 		var scrollableWidth = (widthColumn * numColumns) - $(window).width();
 		var alreadyScrolled = scrollableWidth - (widthColumn * (currentColumn - 1));
@@ -37,6 +39,14 @@ $(function ($) {
 				event.preventDefault();
 				horizontalScroll('right');
 			});
+			// $(document).on("wheel", function(event) {
+			// 	event.preventDefault();
+			// 	horizontalScroll('left');
+			// });
+			// $(document).on("wheel", function(event) {
+			// 	event.preventDefault();
+			// 	horizontalScroll('right');
+			// });
       $(document).on("swiperight", function(event) {
 				event.preventDefault();
 				horizontalScroll('left');

@@ -1,7 +1,9 @@
 /* general
 -----------------------*/
 html {
-  overflow-y: scroll;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
 }
 
 body {
@@ -36,8 +38,24 @@ a:hover {
 /* side nav
 --------------------------------------------------*/
 
-.side-bar {
+.total-nav {
+  width: 100%;
+}
+
+.side-bar-left {
   float: left;
+	height: 100vh;
+	width: 50px;
+	color: #000;
+	background-color: #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.side-bar-right {
+  float: right;
 	height: 100vh;
 	width: 50px;
 	color: #000;
@@ -55,12 +73,30 @@ a:hover {
   float: left;
 }
 
+/*.vertical-text-right {
+  font-size: .95em;
+  width: 100%;
+  transform: rotate(90deg);
+  float: right;
+}*/
+
 .vertical-text .title {
+  /*font-size: 1.5em;*/
   width: 160%;
   margin-left: -50%;
 }
 
+.title .title-hidden {
+  visibility: hidden;
+}
+
+.vertical-text .title-right {
+  width: 160%;
+  margin-left: 50%;
+}
+
 .arrow-left, .arrow-right {
+  font-size: 1.5em;
   cursor: pointer;
 }
 
@@ -68,6 +104,12 @@ a:hover {
 	.nav {
 		display: none;
 	}
+  .side-bar-right {
+    display: none;
+  }
+  .hidden {
+    display: hidden;
+  }
 }
 
 
@@ -112,7 +154,7 @@ a:hover {
 
 .page-home .project .article .otis-type {
   font-weight: bold;
-  text-decoration: underline;
+
   font-size: 10px;
   padding: 20px 0px 0px 0px;
 }
@@ -123,7 +165,7 @@ a:hover {
 }
 
 .page-home .project .image-box .image-caption {
-  padding: 0px 25px;
+  padding: 0% 10% 10% 10%;
   font-size: 11.5px;
   font-style: italic;
   line-height: 135%;
@@ -136,7 +178,7 @@ a:hover {
 }
 
 .book-now {
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 /* images
 --------------------------------------------------*/
@@ -145,7 +187,11 @@ a:hover {
 }
 
 img {
-  padding: 0% 0% 10% 0%;
+  padding: 5% 0% 0% 0%;
+}
+
+.image-p {
+  padding: 0;
 }
 
 .image-box > .horizontal {
